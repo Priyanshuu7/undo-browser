@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Undo</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="app">
+    <header>
+      <div class="logo">↺ Undo</div>
+      <div class="subtitle">Your browser's safety net</div>
+    </header>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="closed">Recently Closed</button>
+      <button class="tab-btn" data-tab="forms">Rescued Forms</button>
+    </div>
+
+    <div id="closed-panel" class="panel active">
+      <div id="closed-list" class="list"></div>
+      <div id="closed-empty" class="empty" hidden>Nothing closed recently. Close a tab or window and it'll show up here.
+      </div>
+    </div>
+
+    <div id="forms-panel" class="panel">
+      <div id="forms-list" class="list"></div>
+      <div id="forms-empty" class="empty" hidden>No rescued forms yet. Fill out a form somewhere and we'll auto-save it
+        in the background.</div>
+    </div>
+
+    <footer>
+      <span class="hint">Tip: <kbd>Ctrl/Cmd+Shift+Z</kbd> restores your last closed window instantly.</span>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
